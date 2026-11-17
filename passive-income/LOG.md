@@ -11,3 +11,10 @@
 - Creado `tools/budget2027.py`: hoja de cálculo de presupuesto 2027 para Excel y Google Sheets. Incluye categorías editables, 12 meses con desplegables, presupuesto vs. real, dashboard con 2 gráficos, metas de ahorro y calculadora de deudas.
 - Fórmulas verificadas recalculando con LibreOffice: 0 errores y totales correctos con datos de prueba.
 - Creadas 4 imágenes para la ficha y `products/budget-2027/LISTING.md`.
+
+## Ciclo 3 — 2026-11-17 23:30 UTC
+- Creado `tools/wallart.py`: genera láminas boho en 5 proporciones de impresión (2:3, 3:4, 4:5, 11x14, ISO) a 300 DPI.
+- 2 sets de 6 diseños originales: abstracto (arcos, arcoíris, sol, tallo botánico) y afirmaciones con frases propias.
+- Corregidos 2 diseños tras revisarlos visualmente.
+- Imágenes de ficha: cuadros enmarcados en una pared, cuadrícula de los 6 diseños y tabla de tamaños.
+- Fichas completas en `products/wall-art/LISTING.md`.

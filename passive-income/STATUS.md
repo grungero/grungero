@@ -19,15 +19,18 @@
 |---|----------|--------|-------|
 | 1 | 2027 Planner (100 pág., 3 colores, hipervinculado) | LISTO para subir | Etsy, Payhip |
 | 2 | 2027 Budget Planner (Excel + Google Sheets, dashboard con gráficos) | LISTO para subir | Etsy, Payhip |
+| 3 | Boho Abstract Wall Art, set de 6 (5 proporciones, 300 DPI) | LISTO para subir | Etsy, Payhip |
+| 4 | Boho Affirmation Wall Art, set de 6 (5 proporciones, 300 DPI) | LISTO para subir | Etsy, Payhip |
 
 ## ⏸ PENDIENTE DEL USUARIO
-1. **Crear cuenta de vendedor en Etsy** (etsy.com/sell) con tus datos, banco e impuestos. Nombre de tienda sugerido: `StudioPlannerCo` (o el que prefieras).
+1. **Crear cuenta de vendedor en Etsy** (etsy.com/sell) con tus datos, banco e impuestos. Nombre de tienda sugerido (sirve para planners y láminas): `SageAndSunStudio` (o el que prefieras).
 2. **Crear cuenta en Payhip** (payhip.com, gratis) y conectar PayPal o Stripe.
 3. Subir el producto #1 siguiendo `products/planner-2027/LISTING.md` (≈10 min).
 3b. Subir el producto #2 siguiendo `products/budget-2027/LISTING.md` (≈10 min).
+3c. Subir los productos #3 y #4 siguiendo `products/wall-art/LISTING.md` (≈10 min cada uno).
 4. Avisarme el nombre de la tienda para enlazarla desde el sitio web.
 
 ## Próximos pasos del agente
-- Producto #3: pack de wall art imprimible (tipografía y citas, vectorial) para Etsy.
-- Diseños para Redbubble/Teepublic.
+- Diseños para Redbubble/Teepublic (reutilizando los diseños boho como stickers, pósters y tazas).
+- Más sets de wall art en otros nichos (cocina, guardería, baño).
 - Sitio web de herramientas gratuitas en GitHub Pages.
