@@ -18,14 +18,16 @@
 | # | Producto | Estado | Canal |
 |---|----------|--------|-------|
 | 1 | 2027 Planner (100 pág., 3 colores, hipervinculado) | LISTO para subir | Etsy, Payhip |
+| 2 | 2027 Budget Planner (Excel + Google Sheets, dashboard con gráficos) | LISTO para subir | Etsy, Payhip |
 
 ## ⏸ PENDIENTE DEL USUARIO
 1. **Crear cuenta de vendedor en Etsy** (etsy.com/sell) con tus datos, banco e impuestos. Nombre de tienda sugerido: `StudioPlannerCo` (o el que prefieras).
 2. **Crear cuenta en Payhip** (payhip.com, gratis) y conectar PayPal o Stripe.
 3. Subir el producto #1 siguiendo `products/planner-2027/LISTING.md` (≈10 min).
+3b. Subir el producto #2 siguiendo `products/budget-2027/LISTING.md` (≈10 min).
 4. Avisarme el nombre de la tienda para enlazarla desde el sitio web.
 
 ## Próximos pasos del agente
-- Plantilla Excel/Google Sheets "2027 Budget Planner" (producto #2).
+- Producto #3: pack de wall art imprimible (tipografía y citas, vectorial) para Etsy.
 - Pack de wall-art imprimible y diseños para Redbubble.
 - Sitio web de herramientas gratuitas en GitHub Pages.
