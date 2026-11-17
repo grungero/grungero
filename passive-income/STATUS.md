@@ -29,5 +29,5 @@
 
 ## Próximos pasos del agente
 - Producto #3: pack de wall art imprimible (tipografía y citas, vectorial) para Etsy.
-- Pack de wall-art imprimible y diseños para Redbubble.
+- Diseños para Redbubble/Teepublic.
 - Sitio web de herramientas gratuitas en GitHub Pages.
