@@ -23,6 +23,7 @@
 | 4 | Boho Affirmation Wall Art, set de 6 (5 proporciones, 300 DPI) | LISTO para subir | Etsy, Payhip |
 | 5 | KDP: 2027 Weekly & Monthly Planner, paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
 | 6 | KDP: 2027 Budget Planner (presupuesto y gastos), paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
+| 7 | 12 diseños POD boho (PNG transparente de 4500x5400) | LISTO para subir | Redbubble, Teepublic |
 
 ## ⏸ PENDIENTE DEL USUARIO
 0. **(PRIORIDAD)** Subir los libros #5 y #6 a KDP siguiendo `products/kdp-planner-2027/KDP-UPLOAD.md` y `products/kdp-budget-2027/KDP-UPLOAD.md` (≈15 min cada uno; ya tienes cuenta).
@@ -31,6 +32,7 @@
 3. Subir el producto #1 siguiendo `products/planner-2027/LISTING.md` (≈10 min).
 3b. Subir el producto #2 siguiendo `products/budget-2027/LISTING.md` (≈10 min).
 3c. Subir los productos #3 y #4 siguiendo `products/wall-art/LISTING.md` (≈10 min cada uno).
+3d. Crear cuenta gratis en Redbubble y subir los 12 diseños siguiendo `products/pod-redbubble/UPLOAD.md` (≈3 min/diseño).
 4. Avisarme el nombre de la tienda para enlazarla desde el sitio web.
 
 ## Plan de diversificación (acordado 2026-11-18: no depender solo de Etsy)
@@ -42,6 +44,5 @@
 - Sitio web con herramientas gratuitas (GitHub Pages) + afiliados: tráfico propio a largo plazo.
 
 ## Próximos pasos del agente
-- Diseños para Redbubble/Teepublic (reutilizando los diseños boho como stickers, pósters y tazas).
 - Más sets de wall art en otros nichos (cocina, guardería, baño).
 - Sitio web de herramientas gratuitas en GitHub Pages.

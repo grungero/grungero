@@ -17,6 +17,19 @@ PAL = dict(cream="#F3ECE2", sand="#E3D3BE", clay="#C9825F", rust="#A85A3C", sage
 # ratio name -> (w_in, h_in) largest common print size for that ratio
 RATIOS = {"2x3": (16, 24), "3x4": (18, 24), "4x5": (16, 20), "11x14": (11, 14), "ISO-A": (16.54, 23.39)}
 DPI = 300
+TRANSPARENT = False  # set True for print-on-demand PNGs (no background, no grain)
+
+
+def canvas(W, H):
+    if TRANSPARENT:
+        return Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    return Image.new("RGB", (W, H), PAL["cream"])
+
+
+def finish(img, seed):
+    return img if TRANSPARENT else grain(img, seed=seed)
+
+
 BASE_W, BASE_H = 2000, 3000  # design canvas (2:3); each ratio re-composes on its own canvas
 
 AFFIRMATIONS = [
@@ -84,7 +97,7 @@ def grain(img, amount=10, seed=0):
 
 # ---------- design functions draw on a W x H canvas ----------
 def abstract(i, W, H):
-    img = Image.new("RGB", (W, H), PAL["cream"])
+    img = canvas(W, H)
     d = ImageDraw.Draw(img)
     u = min(W, H)
     cx = W / 2
@@ -116,11 +129,11 @@ def abstract(i, W, H):
             r1, r2 = u * 0.22, u * 0.36
             d.line([cx + r1 * math.cos(a), H * 0.5 + r1 * math.sin(a), cx + r2 * math.cos(a), H * 0.5 + r2 * math.sin(a)],
                    fill=PAL["mustard"], width=int(u * 0.018))
-    return grain(img, seed=i)
+    return finish(img, i)
 
 
 def affirmation(i, W, H):
-    img = Image.new("RGB", (W, H), PAL["cream"])
+    img = canvas(W, H)
     d = ImageDraw.Draw(img)
     u = min(W, H)
     cx = W / 2
@@ -146,7 +159,7 @@ def affirmation(i, W, H):
         d.text((cx, y), txt, font=f, fill=PAL["ink"], anchor="mt")
         y += size * 1.25
     d.line([cx - u * 0.06, y + u * 0.04, cx + u * 0.06, y + u * 0.04], fill=acc, width=int(u * 0.008))
-    return grain(img, seed=10 + i)
+    return finish(img, 10 + i)
 
 
 SETS = {

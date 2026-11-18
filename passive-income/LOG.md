@@ -29,3 +29,8 @@
 - Pasé de 80 a 100 páginas para que el texto del lomo se pueda leer.
 - `tools/kdp_cover.py` ahora genera portadas de distintos libros con `--book planner|budget`. Comprobé que la portada del planner sigue idéntica.
 - Guía en `products/kdp-budget-2027/KDP-UPLOAD.md`.
+
+## Ciclo 5 — 2026-11-18 01:30 UTC
+- `tools/wallart.py` tiene un nuevo modo `TRANSPARENT`. `tools/pod.py` lo usa para exportar 12 PNG transparentes, recortados y centrados en un lienzo de 4500x5400.
+- Guía de subida a Redbubble y Teepublic con título y 15 etiquetas por diseño, en `products/pod-redbubble/UPLOAD.md`.
+- Nota: los diseños con texto oscuro solo deben venderse en colores claros.
