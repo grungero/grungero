@@ -26,7 +26,7 @@
 | 7 | 12 diseños POD boho + 6 variantes para ropa oscura (PNG transparente de 4500x5400) | LISTO para subir | Redbubble, Teepublic |
 | 8 | Sitio web "Sage & Sun Tools" (/docs): calendario 2027 gratis + 12 páginas de calendarios mensuales con feriados + 3 calculadoras (17 páginas), enlaza a los productos | LISTO, falta activarlo | GitHub Pages |
 
-## ⏸ PENDIENTE DEL USUARIO
+## ⏸ PENDIENTE DEL USUARIO (resumen en START-HERE.md)
 0. **(PRIORIDAD)** Subir los libros #5 y #6 a KDP siguiendo `products/kdp-planner-2027/KDP-UPLOAD.md` y `products/kdp-budget-2027/KDP-UPLOAD.md` (≈15 min cada uno; ya tienes cuenta).
 1. **Crear cuenta de vendedor en Etsy** (etsy.com/sell) con tus datos, banco e impuestos. Nombre de tienda sugerido (sirve para planners y láminas): `SageAndSunStudio` (o el que prefieras).
 2. **Crear cuenta en Payhip** (payhip.com, gratis) y conectar PayPal o Stripe.

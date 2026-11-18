@@ -47,3 +47,7 @@
 ## Ciclo 8 — 2026-11-18 04:30 UTC
 - No se puede verificar desde aquí si GitHub Pages está activo: el proxy de la sesión bloquea github.io.
 - Añadí `dark_variants()` en `tools/pod.py`: 6 versiones de las frases con texto crema para ropa oscura. Instrucciones añadidas en `UPLOAD.md` (obras separadas, solo ropa oscura).
+
+## Ciclo 9 — 2026-11-18 05:30 UTC
+- Sin respuesta del usuario desde hace unas 5 horas. El cuello de botella ahora es publicar, no crear más productos.
+- Creé `START-HERE.md`: una única checklist ordenada por impacto, con tiempos estimados y rutas de archivos (KDP, Pages, Redbubble y Etsy).
