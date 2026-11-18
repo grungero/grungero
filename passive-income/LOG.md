@@ -18,3 +18,8 @@
 - Corregidos 2 diseños tras revisarlos visualmente.
 - Imágenes de ficha: cuadros enmarcados en una pared, cuadrícula de los 6 diseños y tabla de tamaños.
 - Fichas completas en `products/wall-art/LISTING.md`.
+
+## Ciclo extra (pedido del usuario: adelantar KDP) — 2026-11-18
+- Añadido el modo `--print` a `tools/planner2027.py`: sin pestañas ni enlaces, márgenes espejo con medianil de 0.75", en escala de grises para impresión en blanco y negro (la más barata), y todas las fuentes incrustadas (KDP lo exige).
+- Creado `tools/kdp_cover.py`: portada completa según la fórmula oficial de KDP (lomo = páginas × 0.002252", sangrado de 0.125"). Para 100 páginas mide 17.4752 x 11.25 in.
+- Guía completa en `products/kdp-planner-2027/KDP-UPLOAD.md`: título, subtítulo, descripción, 7 palabras clave, categorías, precio y declaración de IA.

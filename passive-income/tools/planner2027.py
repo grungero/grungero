@@ -58,13 +58,17 @@ def week_key(d):
 
 
 class Planner:
-    def __init__(self, path, theme):
+    def __init__(self, path, theme, print_mode=False):
+        self.print_mode = print_mode
         t = THEMES[theme]
         self.A, self.L, self.INK, self.LN = (HexColor(t[k]) for k in ("accent", "light", "ink", "line"))
-        self.c = canvas.Canvas(path, pagesize=letter)
+        self.c = canvas.Canvas(path, pagesize=letter, initialFontName="Body", initialFontSize=10)
         self.c.setTitle(f"{YEAR} Planner")
         self.c.setAuthor("Studio Planner Co.")
         self.page_no = 0
+        if print_mode:
+            # KDP paperback: no hyperlinks, no tabs, mirrored margins with a wider gutter
+            self.c.linkRect = lambda *a, **k: None
 
     # ---------- helpers ----------
     def new_page(self, key=None, outline=None, level=0):
@@ -78,7 +82,11 @@ class Planner:
             c.bookmarkPage(key)
             if outline:
                 c.addOutlineEntry(outline, key, level=level)
-        self.tabs()
+        if self.print_mode:
+            # odd (right-hand) pages: gutter on the left = 0.75in; even pages: 0.61in left, gutter right
+            c.translate(18 if self.page_no % 2 else 8, 0)
+        else:
+            self.tabs()
 
     def tabs(self, active=None):
         c = self.c
@@ -188,8 +196,9 @@ class Planner:
     def cover(self):
         self.new_page("cover", "Cover")
         c = self.c
-        c.setFillColor(self.L)
-        c.rect(M, M, CW, H - 2 * M, stroke=0, fill=1)
+        if not self.print_mode:
+            c.setFillColor(self.L)
+            c.rect(M, M, CW, H - 2 * M, stroke=0, fill=1)
         c.setFillColor(self.A)
         c.rect(M, H / 2 - 2, CW, 4, stroke=0, fill=1)
         c.setFillColor(self.INK)
@@ -208,6 +217,14 @@ class Planner:
         self.new_page("howto", "How to use")
         y = self.title("Welcome", "How to use your planner")
         tips = [
+            "Start with the Year at a Glance and Yearly Goals pages to set your direction.",
+            "Fill in the Yearly Finances page at the end of each month to watch your progress.",
+            "Each month has 3 pages: a monthly calendar, a plan & budget page and a habit tracker.",
+            "Weekly pages follow each month's habit tracker. Weeks start on Monday.",
+            "Use the habit tracker to color in one square for every day you keep a habit.",
+            "Review the 'What went well' and 'What I'll improve' boxes at the end of every month.",
+            "Use the dot-grid Notes pages at the back for lists, ideas and brain dumps.",
+        ] if self.print_mode else [
             "Printable: print any page at 100% (US Letter). A4 also works with 'fit to page'.",
             "Digital: import the PDF into GoodNotes, Notability, Noteshelf, Xodo or any PDF annotation app.",
             "Navigation: tap the tabs on the right edge to jump to the Year overview, any month, or Notes.",
@@ -459,5 +476,5 @@ class Planner:
 if __name__ == "__main__":
     out = sys.argv[1]
     theme = sys.argv[sys.argv.index("--theme") + 1] if "--theme" in sys.argv else "sage"
-    n = Planner(out, theme).build()
+    n = Planner(out, theme, print_mode="--print" in sys.argv).build()
     print(f"{out}: {n} pages")
