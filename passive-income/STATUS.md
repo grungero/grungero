@@ -23,7 +23,7 @@
 | 4 | Boho Affirmation Wall Art, set de 6 (5 proporciones, 300 DPI) | LISTO para subir | Etsy, Payhip |
 | 5 | KDP: 2027 Weekly & Monthly Planner, paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
 | 6 | KDP: 2027 Budget Planner (presupuesto y gastos), paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
-| 7 | 12 diseños POD boho (PNG transparente de 4500x5400) | LISTO para subir | Redbubble, Teepublic |
+| 7 | 12 diseños POD boho + 6 variantes para ropa oscura (PNG transparente de 4500x5400) | LISTO para subir | Redbubble, Teepublic |
 | 8 | Sitio web "Sage & Sun Tools" (/docs): calendario 2027 gratis + 12 páginas de calendarios mensuales con feriados + 3 calculadoras (17 páginas), enlaza a los productos | LISTO, falta activarlo | GitHub Pages |
 
 ## ⏸ PENDIENTE DEL USUARIO

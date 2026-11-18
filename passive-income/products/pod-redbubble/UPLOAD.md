@@ -28,3 +28,8 @@ Teepublic (opcional): los mismos archivos y textos. Teepublic acepta hasta 15 ta
 | `designs/this-too-is-a-beginning.png` | This, Too, Is a Beginning | new beginnings, affirmation, positive quote, hope, mental health, recovery, inspirational, boho, sunrise, motivational, fresh start, self care, quote, gentle reminder, encouragement |
 | `designs/rest-is-part-of-the-work.png` | Rest Is Part of the Work | rest, self care, burnout, affirmation, mental health, slow living, nurse, teacher, positive quote, boho, work life balance, inspirational, gentle reminder, quote, wellness |
 | `designs/be-where-your-feet-are.png` | Be Where Your Feet Are | be where your feet are, mindfulness, present moment, affirmation, mental health, boho rainbow, positive quote, inspirational, meditation, yoga, calm, quote, gentle reminder, self care, wellness |
+
+## Versiones para poleras oscuras (6 archivos `*-DARK-SHIRTS.png`)
+Son las mismas 6 frases, pero con texto crema para ropa negra, azul marino o verde oscuro.
+- Súbelas como **obras separadas**. Usa el mismo título con " (Dark)" al final y las mismas etiquetas.
+- En esas obras activa **solo ropa** (camisetas, polerones y hoodies) y **solo colores oscuros**. Desactiva stickers, tazas y pósters, porque esos productos ya los cubre la versión normal. Así no compites contigo mismo.

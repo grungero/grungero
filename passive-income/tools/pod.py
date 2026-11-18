@@ -40,3 +40,11 @@ def main(out_dir):
 
 if __name__ == "__main__":
     main(sys.argv[1])
+
+
+def dark_variants(out_dir):
+    """Affirmations with cream text, for dark garments (black, navy, forest, charcoal)."""
+    wallart.PAL["ink"] = "#F3ECE2"
+    for i, n in enumerate(NAMES_AFFIRM):
+        fit(wallart.affirmation(i, 3000, 4500)).save(os.path.join(out_dir, f"{n}-DARK-SHIRTS.png"), optimize=True)
+    wallart.PAL["ink"] = "#3D3530"

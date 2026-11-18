@@ -43,3 +43,7 @@
 ## Ciclo 7 — 2026-11-18 03:30 UTC
 - Sin acciones del usuario todavía, así que prioricé el tráfico del sitio. Añadí 12 páginas "<Mes> 2027 Calendar" con un PDF por mes, una tabla del calendario en la página y los feriados de EE. UU. calculados por reglas (Pascua con el algoritmo de Gauss). Verificadas contra las fechas reales.
 - Probadas en tamaño de celular: 0 errores y sin desbordamiento. El sitio pasa a tener 17 páginas en el sitemap.
+
+## Ciclo 8 — 2026-11-18 04:30 UTC
+- No se puede verificar desde aquí si GitHub Pages está activo: el proxy de la sesión bloquea github.io.
+- Añadí `dark_variants()` en `tools/pod.py`: 6 versiones de las frases con texto crema para ropa oscura. Instrucciones añadidas en `UPLOAD.md` (obras separadas, solo ropa oscura).
