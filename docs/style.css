@@ -1,0 +1,25 @@
+
+:root{--bg:#FBF8F3;--card:#fff;--ink:#2F3A33;--muted:#5E6B62;--acc:#7D9A86;--acc2:#C9825F;--line:#E3DDD3}
+@media (prefers-color-scheme:dark){:root{--bg:#1C211E;--card:#262C28;--ink:#EDEAE4;--muted:#B5BDB7;--acc:#9DB9A6;--acc2:#E09B78;--line:#3A423D}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--acc2)}header,main,footer{max-width:860px;margin:0 auto;padding:0 16px}
+header{display:flex;justify-content:space-between;align-items:center;padding-top:18px;flex-wrap:wrap;gap:8px}
+header a.logo{font-weight:700;text-decoration:none;color:var(--ink);font-size:20px}
+nav a{margin-left:14px;font-size:15px;text-decoration:none;color:var(--muted)}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin:28px 0 8px}h2{margin-top:36px}
+.lead{color:var(--muted);font-size:19px;margin-top:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:20px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.grid a.card{display:block;text-decoration:none;color:var(--ink);margin:0}.grid a.card:hover{border-color:var(--acc)}
+label{display:block;font-weight:600;margin:12px 0 4px;font-size:15px}
+input,select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:16px;background:var(--bg);color:var(--ink)}
+button,.btn{display:inline-block;background:var(--acc);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;margin-top:14px}
+.btn.alt{background:var(--acc2)}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}
+.result{font-size:20px;font-weight:700;color:var(--acc)}
+.promo{border-left:5px solid var(--acc2)}
+footer{color:var(--muted);font-size:14px;padding:40px 16px}
+.debt-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:8px;align-items:end;margin-bottom:8px}
+@media (max-width:600px){.debt-row{grid-template-columns:1fr 1fr}}
+.x{background:none;color:var(--muted);border:1px solid var(--line);padding:8px 12px;margin:0}

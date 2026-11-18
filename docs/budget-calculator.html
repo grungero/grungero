@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>50/30/20 Budget Calculator (Free) | Sage & Sun Tools</title><meta name="description" content="Free 50/30/20 budget calculator: enter your monthly take-home pay and see how much to spend on needs, wants and savings."><link rel="canonical" href="https://grungero.github.io/grungero/budget-calculator.html">
+<meta property="og:title" content="50/30/20 Budget Calculator (Free) | Sage & Sun Tools"><meta property="og:description" content="Free 50/30/20 budget calculator: enter your monthly take-home pay and see how much to spend on needs, wants and savings."><meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><a class="logo" href="./">Sage & Sun Tools</a><nav><a href="printable-calendar-2027.html">2027 Calendar</a><a href="budget-calculator.html">Budget</a><a href="debt-payoff-calculator.html">Debt</a><a href="savings-goal-calculator.html">Savings</a></nav></header>
+<main><h1>50/30/20 Budget Calculator</h1><p class="lead">The 50/30/20 rule splits your take-home pay: 50% for needs, 30% for wants and 20% for savings and debt payoff.</p>
+<div class="card"><label for="inc">Monthly take-home income ($)</label><input id="inc" type="number" min="0" step="any" value="4000" inputmode="decimal">
+<div class="row"><div><label for="pn">Needs %</label><input id="pn" type="number" value="50"></div><div><label for="pw">Wants %</label><input id="pw" type="number" value="30"></div><div><label for="ps">Savings %</label><input id="ps" type="number" value="20"></div></div>
+<table style="margin-top:18px"><tr><th>Category</th><th>Per month</th><th>Per year</th></tr>
+<tr><td>Needs (rent, food, bills)</td><td id="n" class="result"></td><td id="ny"></td></tr>
+<tr><td>Wants (fun, dining, shopping)</td><td id="w" class="result"></td><td id="wy"></td></tr>
+<tr><td>Savings &amp; debt payoff</td><td id="s" class="result"></td><td id="sy"></td></tr></table><p id="warn" style="color:var(--acc2)"></p></div>
+<h2>How the 50/30/20 rule works</h2><p><strong>Needs</strong> are bills you must pay: housing, utilities, groceries, insurance, minimum debt payments. <strong>Wants</strong> are everything that makes life fun but isn't essential. <strong>Savings</strong> covers your emergency fund, retirement and extra debt payments. If your needs are higher than 50%, adjust the percentages above to fit your real life.</p>
+<script>
+const $=id=>document.getElementById(id),f=v=>v.toLocaleString(undefined,{style:'currency',currency:'USD'});
+function calc(){const i=+$('inc').value||0,p=[+$('pn').value,+$('pw').value,+$('ps').value];
+[['n',0],['w',1],['s',2]].forEach(([k,j])=>{$(k).textContent=f(i*p[j]/100);$(k+'y').textContent=f(i*p[j]/100*12)});
+const t=p.reduce((a,b)=>a+b,0);$('warn').textContent=t!==100?`Your percentages add up to ${t}%, not 100%.`:''}
+document.querySelectorAll('input').forEach(e=>e.addEventListener('input',calc));calc();
+</script><div class="card promo"><h3 style="margin-top:0">Track it all year long</h3><p>The 2027 Budget Planner turns this into a habit: monthly budgets, expense logs, bill tracker, savings and debt payoff pages.</p><em>Coming soon on Amazon &amp; Etsy.</em></div></main>
+<footer>© 2026 Sage & Sun Tools · Free tools for planning your time and money. Calculators are for educational purposes and are not financial advice.</footer>
+</body></html>

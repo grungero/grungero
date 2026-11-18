@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Debt Payoff Calculator: Snowball vs Avalanche (Free) | Sage & Sun Tools</title><meta name="description" content="Free debt payoff calculator. Compare the debt snowball and debt avalanche methods, see your debt-free date and total interest saved."><link rel="canonical" href="https://grungero.github.io/grungero/debt-payoff-calculator.html">
+<meta property="og:title" content="Debt Payoff Calculator: Snowball vs Avalanche (Free) | Sage & Sun Tools"><meta property="og:description" content="Free debt payoff calculator. Compare the debt snowball and debt avalanche methods, see your debt-free date and total interest saved."><meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><a class="logo" href="./">Sage & Sun Tools</a><nav><a href="printable-calendar-2027.html">2027 Calendar</a><a href="budget-calculator.html">Budget</a><a href="debt-payoff-calculator.html">Debt</a><a href="savings-goal-calculator.html">Savings</a></nav></header>
+<main><h1>Debt Payoff Calculator</h1><p class="lead">Compare the <strong>snowball</strong> (smallest balance first) and <strong>avalanche</strong> (highest interest first) methods and see when you'll be debt-free.</p>
+<div class="card"><div id="debts"></div><button class="x" id="add" type="button">+ Add debt</button>
+<label for="extra">Extra payment per month on top of minimums ($)</label><input id="extra" type="number" min="0" value="200">
+<button id="go" type="button">Calculate</button><div id="out" style="margin-top:16px"></div></div>
+<h2>Snowball or avalanche?</h2><p>The <strong>avalanche</strong> method usually saves the most interest. The <strong>snowball</strong> method gives quick wins by clearing small debts first, which helps many people stay motivated. Either way, paying a fixed extra amount every month is what gets you out of debt.</p>
+<script>
+const D=document.getElementById('debts');
+function row(n='',b='',r='',m=''){const d=document.createElement('div');d.className='debt-row';
+d.innerHTML=`<div><label>Debt name</label><input value="${n}"></div><div><label>Balance $</label><input type="number" value="${b}"></div><div><label>Rate %</label><input type="number" step="any" value="${r}"></div><div><label>Min. payment $</label><input type="number" value="${m}"></div><button class="x" type="button" aria-label="Remove">✕</button>`;
+d.querySelector('button').onclick=()=>d.remove();D.appendChild(d)}
+row('Credit card',6500,22.9,160);row('Medical bill',1200,0,50);row('Car loan',9800,6.9,310);
+document.getElementById('add').onclick=()=>row();
+function sim(debts,extra,order){debts=debts.map(d=>({...d}));let month=0,interest=0;const budget=debts.reduce((a,d)=>a+d.min,0)+extra;
+while(debts.some(d=>d.bal>0.005)&&month<600){month++;let pay=budget;
+debts.forEach(d=>{if(d.bal>0){const i=d.bal*d.rate/1200;d.bal+=i;interest+=i}});
+debts.filter(d=>d.bal>0).forEach(d=>{const p=Math.min(d.min,d.bal);d.bal-=p;pay-=p});
+debts.filter(d=>d.bal>0).sort(order).forEach(d=>{const p=Math.min(pay,d.bal);d.bal-=p;pay-=p})}
+return{month,interest}}
+const f=v=>v.toLocaleString(undefined,{style:'currency',currency:'USD',maximumFractionDigits:0});
+function when(m){const d=new Date();d.setMonth(d.getMonth()+m);return d.toLocaleDateString(undefined,{month:'long',year:'numeric'})}
+document.getElementById('go').onclick=()=>{const debts=[...D.children].map(r=>{const v=[...r.querySelectorAll('input')].map(i=>i.value);return{name:v[0],bal:+v[1]||0,rate:+v[2]||0,min:+v[3]||0}}).filter(d=>d.bal>0);
+const extra=+document.getElementById('extra').value||0;const out=document.getElementById('out');
+if(!debts.length){out.textContent='Add at least one debt.';return}
+const sn=sim(debts,extra,(a,b)=>a.bal-b.bal),av=sim(debts,extra,(a,b)=>b.rate-a.rate);
+if(sn.month>=600){out.innerHTML='<p>With these payments the debt never gets paid off. Try a higher extra payment.</p>';return}
+out.innerHTML=`<table><tr><th>Method</th><th>Debt-free in</th><th>Debt-free by</th><th>Total interest</th></tr>
+<tr><td>Snowball</td><td>${sn.month} months</td><td>${when(sn.month)}</td><td>${f(sn.interest)}</td></tr>
+<tr><td>Avalanche</td><td>${av.month} months</td><td>${when(av.month)}</td><td>${f(av.interest)}</td></tr></table>
+<p class="result">Avalanche saves you ${f(Math.max(sn.interest-av.interest,0))} in interest.</p>`};
+document.getElementById('go').click();
+</script><div class="card promo"><h3 style="margin-top:0">Track it all year long</h3><p>The 2027 Budget Planner turns this into a habit: monthly budgets, expense logs, bill tracker, savings and debt payoff pages.</p><em>Coming soon on Amazon &amp; Etsy.</em></div></main>
+<footer>© 2026 Sage & Sun Tools · Free tools for planning your time and money. Calculators are for educational purposes and are not financial advice.</footer>
+</body></html>

@@ -24,6 +24,7 @@
 | 5 | KDP: 2027 Weekly & Monthly Planner, paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
 | 6 | KDP: 2027 Budget Planner (presupuesto y gastos), paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
 | 7 | 12 diseños POD boho (PNG transparente de 4500x5400) | LISTO para subir | Redbubble, Teepublic |
+| 8 | Sitio web "Sage & Sun Tools" (/docs): calendario 2027 gratis + 3 calculadoras, enlaza a los productos | LISTO, falta activarlo | GitHub Pages |
 
 ## ⏸ PENDIENTE DEL USUARIO
 0. **(PRIORIDAD)** Subir los libros #5 y #6 a KDP siguiendo `products/kdp-planner-2027/KDP-UPLOAD.md` y `products/kdp-budget-2027/KDP-UPLOAD.md` (≈15 min cada uno; ya tienes cuenta).
@@ -33,6 +34,7 @@
 3b. Subir el producto #2 siguiendo `products/budget-2027/LISTING.md` (≈10 min).
 3c. Subir los productos #3 y #4 siguiendo `products/wall-art/LISTING.md` (≈10 min cada uno).
 3d. Crear cuenta gratis en Redbubble y subir los 12 diseños siguiendo `products/pod-redbubble/UPLOAD.md` (≈3 min/diseño).
+3e. Activar el sitio web: GitHub → repo grungero/grungero → Settings → Pages → Source "Deploy from a branch" → Branch `claude/passive-income-agent-7zcl3r`, carpeta `/docs` → Save. Quedará en https://grungero.github.io/grungero/
 4. Avisarme el nombre de la tienda para enlazarla desde el sitio web.
 
 ## Plan de diversificación (acordado 2026-11-18: no depender solo de Etsy)
@@ -45,4 +47,5 @@
 
 ## Próximos pasos del agente
 - Más sets de wall art en otros nichos (cocina, guardería, baño).
-- Sitio web de herramientas gratuitas en GitHub Pages.
+- Cuando haya enlaces de Amazon/Etsy: rellenar el diccionario SHOP de `tools/site.py` y regenerar el sitio.
+- Más páginas SEO (calendarios 2027 por mes, plantillas gratuitas).

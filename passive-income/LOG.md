@@ -34,3 +34,8 @@
 - `tools/wallart.py` tiene un nuevo modo `TRANSPARENT`. `tools/pod.py` lo usa para exportar 12 PNG transparentes, recortados y centrados en un lienzo de 4500x5400.
 - Guía de subida a Redbubble y Teepublic con título y 15 etiquetas por diseño, en `products/pod-redbubble/UPLOAD.md`.
 - Nota: los diseños con texto oscuro solo deben venderse en colores claros.
+
+## Ciclo 6 — 2026-11-18 02:30 UTC
+- Creado `tools/site.py`: genera un sitio estático en `/docs` para GitHub Pages con SEO básico (metadatos, canonical, sitemap y robots). Tiene 5 páginas: inicio, calendario 2027 imprimible gratis (2 PDF), calculadora de presupuesto 50/30/20, calculadora de deudas (bola de nieve vs. avalancha) y calculadora de metas de ahorro.
+- Cada página tiene un recuadro que enlaza a los productos; los enlaces se configuran en `SHOP`.
+- Probado en navegador sin interfaz con ancho de móvil: 0 errores, sin desbordamiento horizontal, cálculos correctos.
