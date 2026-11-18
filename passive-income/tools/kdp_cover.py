@@ -21,11 +21,33 @@ THEMES = {
     "sage": dict(bg="#E6EEE8", accent="#7D9A86", ink="#2F3A33"),
     "blush": dict(bg="#F5E7E5", accent="#C48B8B", ink="#3B2E2E"),
 }
+BOOKS = {
+    "planner": dict(
+        sub="Weekly & Monthly Planner", tag="GOALS  ·  BUDGET  ·  HABIT TRACKER  ·  WEEKLY PAGES",
+        foot="8.5 x 11 in  ·  Dec 28, 2026 – Jan 2, 2028  ·  Monday start", spine="2027 PLANNER",
+        head="Plan your best year yet.",
+        blurb=["A clean, minimalist planner with everything you need",
+               "to set goals, manage your money and build better habits."],
+        items=["2027 year at a glance and yearly goals", "Yearly finance tracker",
+               "12 monthly calendars (Monday start)", "12 monthly plan & budget pages",
+               "12 habit trackers with mood & wins", "53 weekly planning pages", "Dot-grid notes pages"]),
+    "budget": dict(
+        sub="Budget Planner", tag="MONTHLY BUDGET  ·  EXPENSE TRACKER  ·  BILLS  ·  SAVINGS  ·  DEBT",
+        foot="8.5 x 11 in  ·  100 pages  ·  January – December 2027", spine="2027 BUDGET PLANNER",
+        head="Take control of your money.",
+        blurb=["A simple, practical budget book to plan every month,",
+               "track every expense and finally reach your money goals."],
+        items=["Financial snapshot & money goals", "Yearly overview and bill tracker",
+               "12 monthly budget pages", "48 expense tracker pages (4 per month)",
+               "12 monthly reviews with no-spend challenge", "4 savings goal charts & sinking funds",
+               "Debt payoff trackers and notes"]),
+}
 IN = 72
 TRIM_W, TRIM_H, BLEED = 8.5 * IN, 11 * IN, 0.125 * IN
 
 
-def build(out, pages, theme="sage"):
+def build(out, pages, theme="sage", book="planner"):
+    b = BOOKS[book]
     t = THEMES[theme]
     bg, acc, ink = HexColor(t["bg"]), HexColor(t["accent"]), HexColor(t["ink"])
     spine = pages * 0.002252 * IN
@@ -50,13 +72,13 @@ def build(out, pages, theme="sage"):
     c.setFont("Head", 120)
     c.drawCentredString(fx, mid + 40, "2027")
     c.setFont("HeadI", 30)
-    c.drawCentredString(fx, mid - 55, "Weekly & Monthly Planner")
+    c.drawCentredString(fx, mid - 55, b["sub"])
     c.setFont("Body", 13)
     c.setFillColor(acc)
-    c.drawCentredString(fx, mid - 85, "GOALS  ·  BUDGET  ·  HABIT TRACKER  ·  WEEKLY PAGES")
+    c.drawCentredString(fx, mid - 85, b["tag"])
     c.setFillColor(ink)
     c.setFont("Body", 12)
-    c.drawCentredString(fx, BLEED + safe + 30, "8.5 x 11 in  ·  Dec 28, 2026 – Jan 2, 2028  ·  Monday start")
+    c.drawCentredString(fx, BLEED + safe + 30, b["foot"])
 
     # ---- spine ----
     if pages >= 80:
@@ -66,7 +88,7 @@ def build(out, pages, theme="sage"):
         c.setFillColor(ink)
         size = min(8, spine - 0.125 * IN)  # 0.0625 in clearance each side
         c.setFont("BodyB", size)
-        c.drawCentredString(0, -size / 3, "2027 PLANNER")
+        c.drawCentredString(0, -size / 3, b["spine"])
         c.restoreState()
 
     # ---- back cover ----
@@ -74,13 +96,10 @@ def build(out, pages, theme="sage"):
     y = BLEED + TRIM_H - safe - 60
     c.setFillColor(ink)
     c.setFont("HeadB", 24)
-    c.drawString(bx, y, "Plan your best year yet.")
+    c.drawString(bx, y, b["head"])
     y -= 36
     c.setFont("Body", 13)
-    for line in [
-        "A clean, minimalist planner with everything you need",
-        "to set goals, manage your money and build better habits.",
-    ]:
+    for line in b["blurb"]:
         c.drawString(bx, y, line)
         y -= 19
     y -= 16
@@ -90,15 +109,7 @@ def build(out, pages, theme="sage"):
     y -= 24
     c.setFillColor(ink)
     c.setFont("Body", 13)
-    for item in [
-        "2027 year at a glance and yearly goals",
-        "Yearly finance tracker",
-        "12 monthly calendars (Monday start)",
-        "12 monthly plan & budget pages",
-        "12 habit trackers with mood & wins",
-        "53 weekly planning pages",
-        "Dot-grid notes pages",
-    ]:
+    for item in b["items"]:
         c.setFillColor(acc)
         c.circle(bx + 4, y + 4, 3, stroke=0, fill=1)
         c.setFillColor(ink)
@@ -113,5 +124,6 @@ def build(out, pages, theme="sage"):
 if __name__ == "__main__":
     out, pages = sys.argv[1], int(sys.argv[2])
     theme = sys.argv[sys.argv.index("--theme") + 1] if "--theme" in sys.argv else "sage"
-    w, h, s = build(out, pages, theme)
+    book = sys.argv[sys.argv.index("--book") + 1] if "--book" in sys.argv else "planner"
+    w, h, s = build(out, pages, theme, book)
     print(f"{out}: {w:.4f} x {h:.4f} in, spine {s:.4f} in")

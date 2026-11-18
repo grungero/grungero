@@ -22,9 +22,10 @@
 | 3 | Boho Abstract Wall Art, set de 6 (5 proporciones, 300 DPI) | LISTO para subir | Etsy, Payhip |
 | 4 | Boho Affirmation Wall Art, set de 6 (5 proporciones, 300 DPI) | LISTO para subir | Etsy, Payhip |
 | 5 | KDP: 2027 Weekly & Monthly Planner, paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
+| 6 | KDP: 2027 Budget Planner (presupuesto y gastos), paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
 
 ## ⏸ PENDIENTE DEL USUARIO
-0. **(PRIORIDAD)** Subir el libro #5 a KDP siguiendo `products/kdp-planner-2027/KDP-UPLOAD.md` (≈15 min; ya tienes cuenta).
+0. **(PRIORIDAD)** Subir los libros #5 y #6 a KDP siguiendo `products/kdp-planner-2027/KDP-UPLOAD.md` y `products/kdp-budget-2027/KDP-UPLOAD.md` (≈15 min cada uno; ya tienes cuenta).
 1. **Crear cuenta de vendedor en Etsy** (etsy.com/sell) con tus datos, banco e impuestos. Nombre de tienda sugerido (sirve para planners y láminas): `SageAndSunStudio` (o el que prefieras).
 2. **Crear cuenta en Payhip** (payhip.com, gratis) y conectar PayPal o Stripe.
 3. Subir el producto #1 siguiendo `products/planner-2027/LISTING.md` (≈10 min).

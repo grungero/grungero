@@ -23,3 +23,9 @@
 - Añadido el modo `--print` a `tools/planner2027.py`: sin pestañas ni enlaces, márgenes espejo con medianil de 0.75", en escala de grises para impresión en blanco y negro (la más barata), y todas las fuentes incrustadas (KDP lo exige).
 - Creado `tools/kdp_cover.py`: portada completa según la fórmula oficial de KDP (lomo = páginas × 0.002252", sangrado de 0.125"). Para 100 páginas mide 17.4752 x 11.25 in.
 - Guía completa en `products/kdp-planner-2027/KDP-UPLOAD.md`: título, subtítulo, descripción, 7 palabras clave, categorías, precio y declaración de IA.
+
+## Ciclo 4 — 2026-11-18 00:30 UTC
+- Creado `tools/budgetbook2027.py`, que reutiliza el motor del planner. Genera el libro de presupuesto de 100 páginas: resumen financiero, panorama anual, control de facturas, 12 presupuestos mensuales, 48 páginas de gastos, 12 revisiones mensuales con días sin gasto, ahorro, fondos de ahorro por objetivo, deudas y notas.
+- Pasé de 80 a 100 páginas para que el texto del lomo se pueda leer.
+- `tools/kdp_cover.py` ahora genera portadas de distintos libros con `--book planner|budget`. Comprobé que la portada del planner sigue idéntica.
+- Guía en `products/kdp-budget-2027/KDP-UPLOAD.md`.
