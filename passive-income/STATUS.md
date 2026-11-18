@@ -30,6 +30,14 @@
 3c. Subir los productos #3 y #4 siguiendo `products/wall-art/LISTING.md` (≈10 min cada uno).
 4. Avisarme el nombre de la tienda para enlazarla desde el sitio web.
 
+## Plan de diversificación (acordado 2026-11-18: no depender solo de Etsy)
+- Etsy: tope de 6 productos (4 hechos + máx. 2 más). Luego solo se mejora lo que venda.
+- Redbubble / Teepublic (POD): diseños reutilizados y nuevos. Siguiente ciclo.
+- Amazon KDP: el usuario YA tiene cuenta, así que es un canal inmediato. Planner 2027 y budget logbook como libros impresos low-content (sin contenido IA masivo).
+- Payhip: los mismos archivos de Etsy con tienda propia (0 trabajo extra).
+- Adobe Stock / Creative Market: vectores y patrones (ingreso por licencias).
+- Sitio web con herramientas gratuitas (GitHub Pages) + afiliados: tráfico propio a largo plazo.
+
 ## Próximos pasos del agente
 - Diseños para Redbubble/Teepublic (reutilizando los diseños boho como stickers, pósters y tazas).
 - Más sets de wall art en otros nichos (cocina, guardería, baño).
