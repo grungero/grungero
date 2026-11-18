@@ -57,3 +57,6 @@
 
 ## Ciclo 11 — 2026-11-18 07:30 UTC
 - Sin acciones del usuario (unas 7 horas). No creé productos nuevos: hacer más sin publicar nada aporta poco. Solo correo breve.
+
+## Pausa — 2026-11-18 10:08 UTC
+- El usuario pidió pausar. Ciclo horario desactivado (trigger_01Dvqdq5rnyoRRXXequcdEaw, enabled=false). Se reanuda cuando el usuario lo indique.
