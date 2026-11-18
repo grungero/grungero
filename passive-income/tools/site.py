@@ -99,7 +99,7 @@ PAGES.append(page("printable-calendar-2027", "Free Printable 2027 Calendar (PDF)
 <a class="btn alt" href="downloads/2027-calendar-mono.pdf" download>Ink-saving black &amp; white</a>
 <p style="font-size:14px;color:var(--muted)">Free for personal use. Weeks start on Monday. Weekends are shaded.</p></div>
 <h2>What's inside</h2><ul><li>2027 year at a glance</li><li>12 monthly calendars with big writing boxes</li><li>Notes &amp; priorities space on every month</li></ul>
-<h2>How to print</h2><p>Open the PDF, choose <strong>Actual size</strong> (or "Fit to page" for A4) and print. You can print only the months you need.</p>""" + promo("planner")))
+<h2>Single months</h2><p><a href="january-2027-calendar.html">January 2027</a> · <a href="february-2027-calendar.html">February 2027</a> · <a href="march-2027-calendar.html">March 2027</a> · <a href="april-2027-calendar.html">April 2027</a> · <a href="may-2027-calendar.html">May 2027</a> · <a href="june-2027-calendar.html">June 2027</a> · <a href="july-2027-calendar.html">July 2027</a> · <a href="august-2027-calendar.html">August 2027</a> · <a href="september-2027-calendar.html">September 2027</a> · <a href="october-2027-calendar.html">October 2027</a> · <a href="november-2027-calendar.html">November 2027</a> · <a href="december-2027-calendar.html">December 2027</a></p><h2>How to print</h2><p>Open the PDF, choose <strong>Actual size</strong> (or "Fit to page" for A4) and print. You can print only the months you need.</p>""" + promo("planner")))
 
 PAGES.append(page("budget-calculator", "50/30/20 Budget Calculator (Free) | " + SITE,
     "Free 50/30/20 budget calculator: enter your monthly take-home pay and see how much to spend on needs, wants and savings.",
@@ -169,6 +169,88 @@ const need=g-h*Math.pow(1+r,n);let p=r>0?need*r/(Math.pow(1+r,n)-1):need/n;p=Mat
 $('res').textContent=f(p);$('wk').textContent=`(about ${f(p*12/52)} per week)`}
 document.querySelectorAll('input').forEach(e=>e.addEventListener('input',calc));calc();
 </script>""" + promo("budget")))
+
+
+# ---------- monthly calendar pages (SEO: "<month> 2027 calendar") ----------
+import calendar as _cal
+import datetime as _dt
+
+_cal.setfirstweekday(_cal.SUNDAY)  # US readers expect Sunday-first in HTML view
+
+
+def _nth(year, month, weekday, n):
+    d = _dt.date(year, month, 1)
+    d += _dt.timedelta(days=(weekday - d.weekday()) % 7)
+    if n > 0:
+        return d + _dt.timedelta(weeks=n - 1)
+    last = _dt.date(year, month, _cal.monthrange(year, month)[1])
+    return last - _dt.timedelta(days=(last.weekday() - weekday) % 7)
+
+
+def _easter(y):
+    a, b, c = y % 19, y // 100, y % 100
+    d, e = b // 4, b % 4
+    f = (b + 8) // 25
+    g = (b - f + 1) // 3
+    h = (19 * a + b - d - g + 15) % 30
+    i, k = c // 4, c % 4
+    l = (32 + 2 * e + 2 * i - h - k) % 7
+    m = (a + 11 * h + 22 * l) // 451
+    mo = (h + l - 7 * m + 114) // 31
+    return _dt.date(y, mo, ((h + l - 7 * m + 114) % 31) + 1)
+
+
+Y = 2027
+HOLIDAYS = {
+    _dt.date(Y, 1, 1): "New Year's Day", _nth(Y, 1, 0, 3): "Martin Luther King Jr. Day",
+    _dt.date(Y, 2, 14): "Valentine's Day", _nth(Y, 2, 0, 3): "Presidents' Day",
+    _dt.date(Y, 3, 17): "St. Patrick's Day", _easter(Y): "Easter Sunday",
+    _nth(Y, 5, 6, 2): "Mother's Day", _nth(Y, 5, 0, -1): "Memorial Day",
+    _dt.date(Y, 6, 19): "Juneteenth", _nth(Y, 6, 6, 3): "Father's Day",
+    _dt.date(Y, 7, 4): "Independence Day", _nth(Y, 9, 0, 1): "Labor Day",
+    _nth(Y, 10, 0, 2): "Columbus / Indigenous Peoples' Day", _dt.date(Y, 10, 31): "Halloween",
+    _dt.date(Y, 11, 11): "Veterans Day", _nth(Y, 11, 3, 4): "Thanksgiving",
+    _dt.date(Y, 12, 24): "Christmas Eve", _dt.date(Y, 12, 25): "Christmas Day", _dt.date(Y, 12, 31): "New Year's Eve",
+}
+MONTH_NAMES = list(_cal.month_name)[1:]
+MONTH_CSS = """<style>.cal{table-layout:fixed}.cal th{text-align:center;color:var(--muted);font-size:13px}.cal td{height:64px;vertical-align:top;border:1px solid var(--line);font-weight:600;padding:6px}
+.cal td.h{background:color-mix(in srgb,var(--acc2) 18%,transparent)}.cal small{display:block;overflow-wrap:anywhere;font-weight:400;font-size:11px;line-height:1.2;color:var(--acc2)}
+.months{display:flex;flex-wrap:wrap;gap:8px}.months a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-size:14px}</style>"""
+
+
+def month_page(m):
+    name = MONTH_NAMES[m - 1]
+    slug = f"{name.lower()}-2027-calendar"
+    rows = []
+    for week in _cal.monthcalendar(Y, m):
+        cells = []
+        for d in week:
+            if not d:
+                cells.append("<td></td>")
+                continue
+            h = HOLIDAYS.get(_dt.date(Y, m, d))
+            cells.append(f'<td class="h">{d}<small>{h}</small></td>' if h else f"<td>{d}</td>")
+        rows.append("<tr>" + "".join(cells) + "</tr>")
+    hol = [f"<li><strong>{d:%A, %B %-d}</strong>: {n}</li>" for d, n in sorted(HOLIDAYS.items()) if d.month == m]
+    hol_html = ("<h2>Holidays &amp; observances in " + name + " 2027 (US)</h2><ul>" + "".join(hol) + "</ul>") if hol else ""
+    prev_m, next_m = MONTH_NAMES[(m - 2) % 12], MONTH_NAMES[m % 12]
+    nav = '<div class="months">' + "".join(
+        f'<a href="{n.lower()}-2027-calendar.html">{n[:3]}</a>' for n in MONTH_NAMES) + "</div>"
+    body = f"""{MONTH_CSS}<h1>{name} 2027 Calendar</h1>
+<p class="lead">Free printable {name} 2027 calendar with US holidays. Download the PDF or view it below.</p>
+<div class="card"><a class="btn" href="downloads/{name.lower()}-2027-calendar.pdf" download>Download {name} 2027 PDF</a>
+<a class="btn alt" href="printable-calendar-2027.html">Full 2027 calendar (all months)</a></div>
+<table class="cal"><tr>{''.join(f'<th>{d}</th>' for d in ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'])}</tr>{''.join(rows)}</table>
+<p style="font-size:14px;color:var(--muted)">{name} 2027 has {_cal.monthrange(Y, m)[1]} days and starts on a {_dt.date(Y, m, 1):%A}. The PDF version uses a Monday start with large writing boxes.</p>
+{hol_html}<h2>Other months</h2>{nav}
+<p><a href="{prev_m.lower()}-2027-calendar.html">← {prev_m} 2027</a> · <a href="{next_m.lower()}-2027-calendar.html">{next_m} 2027 →</a></p>""" + promo("planner")
+    return page(slug, f"{name} 2027 Calendar – Free Printable PDF with Holidays | {SITE}",
+                f"Free printable {name} 2027 calendar with US holidays. Download a clean PDF (US Letter, prints on A4) or view the {name} 2027 calendar online.",
+                body)
+
+
+for _m in range(1, 13):
+    PAGES.append(month_page(_m))
 
 
 def main():

@@ -39,3 +39,7 @@
 - Creado `tools/site.py`: genera un sitio estático en `/docs` para GitHub Pages con SEO básico (metadatos, canonical, sitemap y robots). Tiene 5 páginas: inicio, calendario 2027 imprimible gratis (2 PDF), calculadora de presupuesto 50/30/20, calculadora de deudas (bola de nieve vs. avalancha) y calculadora de metas de ahorro.
 - Cada página tiene un recuadro que enlaza a los productos; los enlaces se configuran en `SHOP`.
 - Probado en navegador sin interfaz con ancho de móvil: 0 errores, sin desbordamiento horizontal, cálculos correctos.
+
+## Ciclo 7 — 2026-11-18 03:30 UTC
+- Sin acciones del usuario todavía, así que prioricé el tráfico del sitio. Añadí 12 páginas "<Mes> 2027 Calendar" con un PDF por mes, una tabla del calendario en la página y los feriados de EE. UU. calculados por reglas (Pascua con el algoritmo de Gauss). Verificadas contra las fechas reales.
+- Probadas en tamaño de celular: 0 errores y sin desbordamiento. El sitio pasa a tener 17 páginas en el sitemap.

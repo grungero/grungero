@@ -24,7 +24,7 @@
 | 5 | KDP: 2027 Weekly & Monthly Planner, paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
 | 6 | KDP: 2027 Budget Planner (presupuesto y gastos), paperback 8.5x11, 100 pág. | LISTO para subir | Amazon KDP |
 | 7 | 12 diseños POD boho (PNG transparente de 4500x5400) | LISTO para subir | Redbubble, Teepublic |
-| 8 | Sitio web "Sage & Sun Tools" (/docs): calendario 2027 gratis + 3 calculadoras, enlaza a los productos | LISTO, falta activarlo | GitHub Pages |
+| 8 | Sitio web "Sage & Sun Tools" (/docs): calendario 2027 gratis + 12 páginas de calendarios mensuales con feriados + 3 calculadoras (17 páginas), enlaza a los productos | LISTO, falta activarlo | GitHub Pages |
 
 ## ⏸ PENDIENTE DEL USUARIO
 0. **(PRIORIDAD)** Subir los libros #5 y #6 a KDP siguiendo `products/kdp-planner-2027/KDP-UPLOAD.md` y `products/kdp-budget-2027/KDP-UPLOAD.md` (≈15 min cada uno; ya tienes cuenta).
@@ -48,4 +48,4 @@
 ## Próximos pasos del agente
 - Más sets de wall art en otros nichos (cocina, guardería, baño).
 - Cuando haya enlaces de Amazon/Etsy: rellenar el diccionario SHOP de `tools/site.py` y regenerar el sitio.
-- Más páginas SEO (calendarios 2027 por mes, plantillas gratuitas).
+- Más páginas SEO (plantillas gratuitas, calendario 2028 en 2027).
