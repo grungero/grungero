@@ -51,3 +51,6 @@
 ## Ciclo 9 — 2026-11-18 05:30 UTC
 - Sin respuesta del usuario desde hace unas 5 horas. El cuello de botella ahora es publicar, no crear más productos.
 - Creé `START-HERE.md`: una única checklist ordenada por impacto, con tiempos estimados y rutas de archivos (KDP, Pages, Redbubble y Etsy).
+
+## Ciclo 10 — 2026-11-18 06:30 UTC
+- Ficha de paquete para Etsy: planner + hoja de presupuesto por USD 10.99 (ahorro del 25%). Kit en `products/bundle-2027/`, con imagen principal.

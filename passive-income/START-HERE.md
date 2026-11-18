@@ -24,6 +24,7 @@ Descarga los archivos desde: https://github.com/grungero/grungero/tree/claude/pa
 - [ ] Ficha 1: Planner digital → `products/planner-2027/LISTING.md`
 - [ ] Ficha 2: Budget spreadsheet → `products/budget-2027/LISTING.md`
 - [ ] Fichas 3 y 4: láminas boho → `products/wall-art/LISTING.md`
+- [ ] Ficha 5 (paquete): `products/bundle-2027/LISTING.md`
 - [ ] Mándame los enlaces de las fichas.
 
 ## Después de publicar
